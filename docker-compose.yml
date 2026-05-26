@@ -1,0 +1,12 @@
+services:
+  backend:
+    build: ./backend
+    container_name: video_streaming_backend
+    ports:
+      - "5000:5000"
+
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    environment:
+      - PORT=5000
